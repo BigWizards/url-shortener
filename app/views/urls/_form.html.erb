@@ -1,0 +1,12 @@
+<%= simple_form_for(@url) do |f| %>
+  <div class="field">
+    <div class="control">
+        <%= f.input :long_url, input_html: { class: "input", placeholder: "Your URL"}, label: false, wrapper: false%>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.button :submit, class: "button is-link" %>
+    </div>
+  </div>
+<% end %>
