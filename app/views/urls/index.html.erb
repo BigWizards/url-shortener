@@ -1,2 +1,31 @@
-<h1>Urls#index</h1>
-<p>Find me in app/views/urls/index.html.erb</p>
+<section class="hero is-primary is-fullheight">
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 is-strong">
+        Get Short
+      </h1>
+      <p class="subtitle">
+        A modern URL shortener with style
+      </p>
+      <%= simple_form_for(@url) do |f| %>
+        <div class="field">
+          <div class="control">
+             <%= f.input :long_url, input_html: { class: "input", placeholder: "Your URL"}, label: false, wrapper: false%>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <%= f.button :submit, class: "button is-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container has-text-centered">
+      <p>A Jacob Jones website</p>
+     <div> 
+  </div>
+</section>
