@@ -1,10 +1,11 @@
 class UrlsController < ApplicationController
+  before_action :set_event, only: :show 
+
   def index
     @url = Url.new
   end
 
   def show
-    @url = Url.new
     @urls = Url.all.order(created_at: :desc)
   end
 
@@ -24,6 +25,10 @@ class UrlsController < ApplicationController
   end
 
   private
+
+  def set_event
+    @url = Url.find(params[:id])
+  end
   
   def url_generator
     url = "g.et/"
