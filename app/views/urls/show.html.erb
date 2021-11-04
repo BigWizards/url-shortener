@@ -1,0 +1,17 @@
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <h1 class="title">Here is your new url!</h1>
+    <p class="is-size-1 has-text-weight-semibold"><%= @url.short_url %></p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="block has-text-centered">
+      <h2 class="title is-4">Check out some of our other URLs</h2>
+    </div>
+    <div class="block">
+      <%= render "urls/table" %>
+    </div>
+  </div>
+</section>
