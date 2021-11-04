@@ -1,12 +1,14 @@
 class UrlsController < ApplicationController
   before_action :set_event, only: :show 
 
-  def index
+  def home
     @url = Url.new
   end
 
+  def index
+  end
+
   def show
-    @urls = Url.all.order(created_at: :desc)
   end
 
   def create
