@@ -1,0 +1,20 @@
+<div class="table-container">
+  <table class="table is-fullwidth has-background-info has-text-white">
+    <thead >
+      <th class="has-text-white">Original URL</th>
+      <th class="has-text-white">Shortened URL</th>
+    </thead>
+    <tfoot>
+      <th class="has-text-white">Original URL</th>
+      <th class="has-text-white">Shortened URL</th>
+    </tfoot>
+    <tbody>
+      <% Url.find_each do |url| %>
+        <tr>
+          <td><%= url.long_url %></td>
+          <td><%= url.short_url %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
