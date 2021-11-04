@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a URL shortening app called "Get Short".
 
-Things you may want to cover:
+It will take a URL and assign it a generated short URL that is unqiue to the entered URL.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There is also a page to view all of the URLs generated using the app.
