@@ -11,6 +11,30 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="hero is-info is-fullheight">
+
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a>
+                <%= link_to "Home", root_path, class: "navbar-item" %>
+              </a>
+              <a>
+                <%= link_to "All URLs", urls_path, class: "navbar-item" %>
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <%= yield %>
+
+      <div class="hero-foot">
+        <div class="container has-text-centered">
+          <p>A Jacob Jones website</p>
+        <div> 
+      </div>
+    </section>
   </body>
 </html>
