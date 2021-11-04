@@ -32,12 +32,15 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
   
+  #Used recursion to make sure that each url is unique 
   def url_generator
     url = "g.et/"
     url << "#{random_characters}" 
     Url.where(short_url: url).exists? ? url_generator : url
   end
 
+  #Made a random string method to have an alphanumeric string 
+  #rather than just a numeric or alphabet based string for the url 
   def random_characters
     charset = Array('0'..'9') + Array('a'..'z')
     Array.new(6) { charset.sample }.join
