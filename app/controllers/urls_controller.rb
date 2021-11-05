@@ -20,7 +20,7 @@ class UrlsController < ApplicationController
         format.html { redirect_to @url, notice: "Here is your new url." }
         format.json { render :show, status: :created, location: @url }
       else
-        format.html { render :index, status: :unprocessable_entity }
+        format.html { render :home, status: :unprocessable_entity }
         format.json { render json: @url.errors, status: :unprocessable_entity }
       end
     end
