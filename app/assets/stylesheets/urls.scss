@@ -1,3 +1,14 @@
 // Place all the styles related to the urls controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.long_url {
+  &:hover {
+    overflow: visible;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -11,8 +11,7 @@
     <tbody>
       <% Url.find_each do |url| %>
         <tr>
-          <td style="white-space: nowrap; overflow: hidden;
-  text-overflow: ellipsis"><%= url.long_url %></td>
+          <td class="long_url"><%= url.long_url %></td>
           <td><%= url.short_url %></td>
         </tr>
       <% end %>
