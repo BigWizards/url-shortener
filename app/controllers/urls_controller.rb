@@ -13,7 +13,7 @@ class UrlsController < ApplicationController
 
   def create
     @url = Url.new(url_params)
-    @url.short_url = url_generator
+    @url.short_url = Url.url_generator
 
     respond_to do |format|
       if @url.save
@@ -30,20 +30,6 @@ class UrlsController < ApplicationController
 
   def set_event
     @url = Url.find(params[:id])
-  end
-  
-  #Used recursion to make sure that each url is unique 
-  def url_generator
-    url = "g.et/"
-    url << "#{random_characters}" 
-    Url.where(short_url: url).exists? ? url_generator : url
-  end
-
-  #Made a random string method to have an alphanumeric string 
-  #rather than just a numeric or alphabet based string for the url 
-  def random_characters
-    charset = Array('0'..'9') + Array('a'..'z')
-    Array.new(6) { charset.sample }.join
   end
 
   def url_params
