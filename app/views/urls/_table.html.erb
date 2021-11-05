@@ -1,5 +1,5 @@
 <div class="table-container">
-  <table class="table is-fullwidth has-background-info has-text-white">
+  <table style="table-layout: fixed; width: 100%" class="table is-fullwidth has-background-info has-text-white">
     <thead >
       <th class="has-text-white">Original URL</th>
       <th class="has-text-white">Shortened URL</th>
@@ -11,7 +11,7 @@
     <tbody>
       <% Url.find_each do |url| %>
         <tr>
-          <td><%= url.long_url %></td>
+          <td style="word-wrap: break-word"><%= url.long_url %></td>
           <td><%= url.short_url %></td>
         </tr>
       <% end %>
